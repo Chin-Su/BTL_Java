@@ -304,6 +304,8 @@ public class AdminUI extends javax.swing.JFrame {
         if(homePanel == null) {
             homePanel = new HomePanel();
             tbpAdmin.addTab("Trang chủ", homePanel);
+        } else {
+            homePanel.load();
         }
         
         tbpAdmin.setSelectedComponent(homePanel);

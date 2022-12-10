@@ -19,6 +19,12 @@ public class HomePanel extends javax.swing.JPanel {
         txtDau.setText(String.valueOf(new ManagementStudentPanel(false).getNumberOfDo()));
         txtTruot.setText(String.valueOf(new ManagementStudentPanel(false).getNumberOfTach()));
     }
+    
+    public void load() {
+        txtDuThi.setText(String.valueOf(new ManagementStudentPanel(false).getNumberOfAll()));
+        txtDau.setText(String.valueOf(new ManagementStudentPanel(false).getNumberOfDo()));
+        txtTruot.setText(String.valueOf(new ManagementStudentPanel(false).getNumberOfTach()));
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,6 +50,11 @@ public class HomePanel extends javax.swing.JPanel {
         txtTruot = new javax.swing.JTextField();
 
         setMaximumSize(new java.awt.Dimension(400, 210));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 153, 0));
@@ -169,6 +180,11 @@ public class HomePanel extends javax.swing.JPanel {
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        // TODO add your handling code here:
+        load();
+    }//GEN-LAST:event_formMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
